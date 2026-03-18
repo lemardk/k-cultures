@@ -1,54 +1,311 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Website</title>
+    <title>K-Cultures — 한국 문화의 모든 것</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Modern News</h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">World</a>
-                <a href="#">Business</a>
-                <a href="#">Technology</a>
-                <a href="#">More</a>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header__inner">
+            <a href="#" class="logo">K<span class="logo__accent">·</span>CULTURES</a>
+            <nav class="nav" id="nav">
+                <a href="#" class="nav__link">K-POP</a>
+                <a href="#" class="nav__link">K-드라마</a>
+                <a href="#" class="nav__link">K-푸드</a>
+                <a href="#" class="nav__link">K-뷰티</a>
+                <a href="#" class="nav__link">라이프스타일</a>
+                <a href="#" class="nav__cta">구독하기</a>
             </nav>
+            <button class="burger" id="burger" aria-label="메뉴 열기">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
-    <main class="container">
-        <section class="featured-article">
-            <img src="https://via.placeholder.com/800x400" alt="Featured article image">
-            <h2>Featured Article Headline</h2>
-            <p>This is the summary of the featured news article. It's the most important story of the day.</p>
-        </section>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__inner container">
+            <div class="hero__tag">TRENDING NOW</div>
+            <h1 class="hero__title">한국 문화가<br>세계를 바꾸고 있다</h1>
+            <p class="hero__sub">K-POP부터 K-드라마, K-푸드까지.<br>한류의 모든 것을 가장 깊이 있게.</p>
+            <div class="hero__actions">
+                <a href="#" class="btn btn--primary">최신 기사 보기</a>
+                <a href="#" class="btn btn--ghost">더 알아보기</a>
+            </div>
+        </div>
+        <div class="hero__marquee">
+            <div class="marquee__track">
+                <span>K-POP</span><span>·</span>
+                <span>K-드라마</span><span>·</span>
+                <span>BTS</span><span>·</span>
+                <span>블랙핑크</span><span>·</span>
+                <span>오징어게임</span><span>·</span>
+                <span>한식</span><span>·</span>
+                <span>K-뷰티</span><span>·</span>
+                <span>아이유</span><span>·</span>
+                <span>뉴진스</span><span>·</span>
+                <span>K-웹툰</span><span>·</span>
+                <span>K-POP</span><span>·</span>
+                <span>K-드라마</span><span>·</span>
+                <span>BTS</span><span>·</span>
+                <span>블랙핑크</span><span>·</span>
+                <span>오징어게임</span><span>·</span>
+                <span>한식</span><span>·</span>
+                <span>K-뷰티</span><span>·</span>
+                <span>아이유</span><span>·</span>
+                <span>뉴진스</span><span>·</span>
+                <span>K-웹툰</span><span>·</span>
+            </div>
+        </div>
+    </section>
 
-        <section class="article-list">
-            <article>
-                <img src="https://via.placeholder.com/400x200" alt="Article image">
-                <h3>Article Headline 1</h3>
-                <p>A brief summary of the first article.</p>
+    <!-- FEATURED -->
+    <section class="featured container">
+        <div class="section-header">
+            <span class="section-tag">FEATURED</span>
+            <h2 class="section-title">이번 주 주목해야 할 이야기</h2>
+        </div>
+        <div class="featured__grid">
+            <article class="card card--hero">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=800&q=80" alt="K-POP 글로벌 열풍" loading="lazy">
+                    <span class="card__category">K-POP</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">K-POP, 빌보드를 넘어 그래미까지 — 한국 음악이 써내려가는 새 역사</h3>
+                    <p class="card__excerpt">2025년, 한국 아티스트들이 세계 최고 권위의 음악 시상식 그래미에 처음으로 후보로 오르며 K-POP의 영향력이 새로운 국면을 맞이하고 있다.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 18</span>
+                        <span class="card__read">5분 읽기</span>
+                    </div>
+                </div>
             </article>
-            <article>
-                <img src="https://via.placeholder.com/400x200" alt="Article image">
-                <h3>Article Headline 2</h3>
-                <p>A brief summary of the second article.</p>
-            </article>
-            <article>
-                <img src="https://via.placeholder.com/400x200" alt="Article image">
-                <h3>Article Headline 3</h3>
-                <p>A brief summary of the third article.</p>
-            </article>
-        </section>
-    </main>
+            <div class="featured__side">
+                <article class="card card--side">
+                    <div class="card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1590080874088-eec64895b423?w=600&q=80" alt="K-드라마" loading="lazy">
+                        <span class="card__category">K-드라마</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">오징어게임 시즌3, 전 세계 동시 공개 — 넷플릭스 역대 최고 기록 노린다</h3>
+                        <div class="card__meta">
+                            <span class="card__date">2026. 03. 17</span>
+                            <span class="card__read">3분 읽기</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card--side">
+                    <div class="card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80" alt="K-뷰티" loading="lazy">
+                        <span class="card__category">K-뷰티</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">세포라가 선택한 K-뷰티 브랜드 TOP 10 — 글로벌 뷰티 시장을 장악하다</h3>
+                        <div class="card__meta">
+                            <span class="card__date">2026. 03. 16</span>
+                            <span class="card__read">4분 읽기</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card card--side">
+                    <div class="card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1498654200943-1088dd4438ae?w=600&q=80" alt="K-푸드" loading="lazy">
+                        <span class="card__category">K-푸드</span>
+                    </div>
+                    <div class="card__body">
+                        <h3 class="card__title">뉴욕 미슐랭 스타 셰프들이 선택한 한식 재료들 — 된장과 고추장의 세계화</h3>
+                        <div class="card__meta">
+                            <span class="card__date">2026. 03. 15</span>
+                            <span class="card__read">6분 읽기</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Modern News. All rights reserved.</p>
+    <!-- CATEGORY STRIP -->
+    <section class="categories container">
+        <div class="categories__grid">
+            <a href="#" class="cat-card" style="--c: #fa3633">
+                <span class="cat-card__icon">🎵</span>
+                <span class="cat-card__name">K-POP</span>
+                <span class="cat-card__count">124 기사</span>
+            </a>
+            <a href="#" class="cat-card" style="--c: #6c63ff">
+                <span class="cat-card__icon">🎬</span>
+                <span class="cat-card__name">K-드라마</span>
+                <span class="cat-card__count">98 기사</span>
+            </a>
+            <a href="#" class="cat-card" style="--c: #ff6b35">
+                <span class="cat-card__icon">🍜</span>
+                <span class="cat-card__name">K-푸드</span>
+                <span class="cat-card__count">76 기사</span>
+            </a>
+            <a href="#" class="cat-card" style="--c: #e91e8c">
+                <span class="cat-card__icon">✨</span>
+                <span class="cat-card__name">K-뷰티</span>
+                <span class="cat-card__count">89 기사</span>
+            </a>
+            <a href="#" class="cat-card" style="--c: #00b894">
+                <span class="cat-card__icon">🏯</span>
+                <span class="cat-card__name">라이프스타일</span>
+                <span class="cat-card__count">55 기사</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- LATEST ARTICLES -->
+    <section class="latest container">
+        <div class="section-header">
+            <span class="section-tag">LATEST</span>
+            <h2 class="section-title">최신 기사</h2>
+            <a href="#" class="section-more">전체 보기 →</a>
+        </div>
+        <div class="latest__grid">
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80" alt="콘서트" loading="lazy">
+                    <span class="card__category">K-POP</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">뉴진스 월드투어, 100만 관객 돌파 — 4세대 걸그룹의 새 이정표</h3>
+                    <p class="card__excerpt">뉴진스가 아시아·북미·유럽 순회공연을 통해 K-POP 4세대의 글로벌 위상을 증명했다.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 18</span>
+                        <span class="card__read">4분 읽기</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1586769852044-692d6e3703f0?w=600&q=80" alt="스킨케어" loading="lazy">
+                    <span class="card__category">K-뷰티</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">유리 피부 만들기 — 2026년 K-뷰티 스킨케어 루틴 완벽 가이드</h3>
+                    <p class="card__excerpt">한국 피부과 전문의가 직접 알려주는 단계별 스킨케어 루틴과 핵심 성분 가이드.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 17</span>
+                        <span class="card__read">7분 읽기</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1583394293214-0d7fc87e4a6e?w=600&q=80" alt="한식당" loading="lazy">
+                    <span class="card__category">K-푸드</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">파리에서 만나는 정통 한식 — 현지인이 줄 서는 한국 식당 5곳</h3>
+                    <p class="card__excerpt">프랑스 현지 미식가들도 인정한 파리 최고의 한식당 리스트를 엄선해 소개한다.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 16</span>
+                        <span class="card__read">5분 읽기</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80" alt="드라마 촬영장" loading="lazy">
+                    <span class="card__category">K-드라마</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">넷플릭스 TOP 10을 독식한 한국 드라마들 — 그 성공의 비밀</h3>
+                    <p class="card__excerpt">스토리텔링, 연출, 제작 퀄리티까지 — 한국 드라마가 글로벌 시청자를 사로잡는 이유를 분석한다.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 15</span>
+                        <span class="card__read">8분 읽기</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&q=80" alt="한국 카페" loading="lazy">
+                    <span class="card__category">라이프스타일</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">서울 성수동 카페 문화가 전 세계 카페 트렌드를 이끌고 있다</h3>
+                    <p class="card__excerpt">개성 넘치는 팝업 카페와 인스타그래머블한 공간들이 탄생시킨 '서울 카페 문화'의 글로벌 확산.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 14</span>
+                        <span class="card__read">5분 읽기</span>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--grid">
+                <div class="card__img-wrap">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80" alt="음악" loading="lazy">
+                    <span class="card__category">K-POP</span>
+                </div>
+                <div class="card__body">
+                    <h3 class="card__title">AI 시대의 K-POP — 버추얼 아이돌이 실제 팬덤을 만들어가는 방법</h3>
+                    <p class="card__excerpt">AI 기술로 탄생한 가상 아이돌 그룹들이 실제 팬덤을 형성하며 엔터테인먼트 산업의 경계를 허물고 있다.</p>
+                    <div class="card__meta">
+                        <span class="card__date">2026. 03. 13</span>
+                        <span class="card__read">6분 읽기</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter__inner container">
+            <div class="newsletter__text">
+                <span class="section-tag">NEWSLETTER</span>
+                <h2 class="newsletter__title">한류의 최신 소식을<br>가장 먼저 받아보세요</h2>
+                <p class="newsletter__desc">매주 월요일, 엄선된 K-컬처 뉴스와 깊이 있는 분석을 받아보실 수 있습니다.</p>
+            </div>
+            <form class="newsletter__form" onsubmit="handleSubscribe(event)">
+                <input type="email" class="newsletter__input" placeholder="이메일 주소를 입력해주세요" required>
+                <button type="submit" class="btn btn--primary">구독하기</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__brand">
+                <a href="#" class="logo">K<span class="logo__accent">·</span>CULTURES</a>
+                <p class="footer__tagline">한국 문화의 모든 것을 담다</p>
+            </div>
+            <nav class="footer__nav">
+                <div class="footer__col">
+                    <span class="footer__col-title">카테고리</span>
+                    <a href="#">K-POP</a>
+                    <a href="#">K-드라마</a>
+                    <a href="#">K-푸드</a>
+                    <a href="#">K-뷰티</a>
+                    <a href="#">라이프스타일</a>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__col-title">소개</span>
+                    <a href="#">About</a>
+                    <a href="#">팀 소개</a>
+                    <a href="#">광고 문의</a>
+                    <a href="#">제보하기</a>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__col-title">팔로우</span>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">X (Twitter)</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer__bottom container">
+            <p>&copy; 2026 K-Cultures. All rights reserved.</p>
         </div>
     </footer>
 
