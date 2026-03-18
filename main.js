@@ -26,23 +26,42 @@ nav.querySelectorAll('a').forEach(link => {
     });
 });
 
-// Newsletter subscribe
-function handleSubscribe(e) {
+// Newsletter subscribe — Formspree
+async function handleSubscribe(e) {
     e.preventDefault();
-    const input = e.target.querySelector('input[type="email"]');
-    const btn   = e.target.querySelector('button');
-    const email = input.value.trim();
+    const form  = e.target;
+    const input = form.querySelector('input[type="email"]');
+    const btn   = form.querySelector('button[type="submit"]');
 
-    if (!email) return;
+    btn.textContent = '전송 중...';
+    btn.disabled    = true;
 
-    btn.textContent = '완료!';
-    btn.style.background = '#00b894';
-    btn.disabled = true;
-    input.value  = '';
+    try {
+        const res = await fetch('https://formspree.io/f/xqeywkon', {
+            method:  'POST',
+            headers: { 'Accept': 'application/json' },
+            body:    new FormData(form),
+        });
 
-    setTimeout(() => {
-        btn.textContent = '구독하기';
-        btn.style.background = '';
-        btn.disabled = false;
-    }, 3000);
+        if (res.ok) {
+            btn.textContent      = '구독 완료!';
+            btn.style.background = '#00b894';
+            input.value          = '';
+            setTimeout(() => {
+                btn.textContent      = '구독하기';
+                btn.style.background = '';
+                btn.disabled         = false;
+            }, 3000);
+        } else {
+            throw new Error('서버 오류');
+        }
+    } catch {
+        btn.textContent      = '오류 발생 — 다시 시도';
+        btn.style.background = '#e74c3c';
+        btn.disabled         = false;
+        setTimeout(() => {
+            btn.textContent      = '구독하기';
+            btn.style.background = '';
+        }, 3000);
+    }
 }

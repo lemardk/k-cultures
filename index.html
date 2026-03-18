@@ -295,9 +295,9 @@
                 <h2 class="newsletter__title">한류의 최신 소식을<br>가장 먼저 받아보세요</h2>
                 <p class="newsletter__desc">매주 월요일, 엄선된 K-컬처 뉴스와 깊이 있는 분석을 받아보실 수 있습니다.</p>
             </div>
-            <form class="newsletter__form" onsubmit="handleSubscribe(event)">
-                <input type="email" class="newsletter__input" placeholder="이메일 주소를 입력해주세요" required>
-                <button type="submit" class="btn btn--primary">구독하기</button>
+            <form class="newsletter__form" id="newsletterForm" onsubmit="handleSubscribe(event)">
+                <input type="email" name="email" class="newsletter__input" placeholder="이메일 주소를 입력해주세요" required>
+                <button type="submit" class="btn btn--primary" id="subscribeBtn">구독하기</button>
             </form>
         </div>
     </section>
