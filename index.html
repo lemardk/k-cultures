@@ -1,14 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <div class="container">
+            <h1>Modern News</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">World</a>
+                <a href="#">Business</a>
+                <a href="#">Technology</a>
+                <a href="#">More</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="featured-article">
+            <img src="https://via.placeholder.com/800x400" alt="Featured article image">
+            <h2>Featured Article Headline</h2>
+            <p>This is the summary of the featured news article. It's the most important story of the day.</p>
+        </section>
+
+        <section class="article-list">
+            <article>
+                <img src="https://via.placeholder.com/400x200" alt="Article image">
+                <h3>Article Headline 1</h3>
+                <p>A brief summary of the first article.</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/400x200" alt="Article image">
+                <h3>Article Headline 2</h3>
+                <p>A brief summary of the second article.</p>
+            </article>
+            <article>
+                <img src="https://via.placeholder.com/400x200" alt="Article image">
+                <h3>Article Headline 3</h3>
+                <p>A brief summary of the third article.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Modern News. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
